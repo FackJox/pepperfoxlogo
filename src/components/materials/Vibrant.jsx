@@ -54,4 +54,3 @@ export function Vibrant(props) {
 	);
 }
 
-useGLTF.preload("female_marble_statue_polished_but_old.glb");

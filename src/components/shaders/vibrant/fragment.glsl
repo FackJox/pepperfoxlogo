@@ -171,9 +171,9 @@ void main() {
 
 
     vec2 modifiedUv = fract(vUv + vec2(uTime/20.0, uTime/20.0));
-    vec4 texture = texture2D(abstractTexture, modifiedUv + 0.2 * cnoise(vec4(vUv*10.0, uTime/100.0, 0.0), vec4(5.0)));
+    vec4 texture = texture2D(abstractTexture, modifiedUv + 0.4 * cnoise(vec4(vUv*1.5, uTime/100.0, 0.0), vec4(5.0)));
 
-    // gl_FragColor = vec4(vUv,0.0,1.0);
+    // gl_FragColor = vec4(fakeUv,0.0,1.0);
     gl_FragColor = texture;
     // gl_FragColor = vec4(newFakeUv,0.0,1.0);
     // gl_FragColor = vec4(vNormal,1.0);

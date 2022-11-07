@@ -8,7 +8,8 @@ import { Canvas } from "@react-three/fiber";
 import { Perf } from "r3f-perf";
 import { Suspense } from "react";
 
-import { Pepperfox } from "./components/Pepperfox";
+import { PepperfoxMesh } from "./components/PepperfoxMesh";
+import { SeriouslyCuriously } from "./components/SeriouslyCuriously"
 import { Pfx } from "./components/Pfx";
 import { Painted }  from "./components/materials/Painted"
 import { Pebbles }  from "./components/materials/Pebbles"
@@ -28,16 +29,13 @@ function App() {
 			<Suspense fallback={null}>
 				<OrbitControls />
 
-				<Pepperfox
-					position={[-0.75, 0, 0]}
+				<PepperfoxMesh
+					position={[0, 0.3, 0]}
+					rotation={[ 90*Math.PI / 180, 0, 0]}
 					lightPos={lightPos}
 					scale={0.3}
 				/>
-				{/* <Painted lightPos={lightPos} /> */}
-				{/* <Pebbles /> */}
-				{/* <Pfx /> */}
-				{/* <Tribal /> */}
-				{/* <Vibrant lightPos={lightPos} /> */}
+			<SeriouslyCuriously />
 
 				<ambientLight intensity={0.2} />
 				<directionalLight
@@ -54,7 +52,7 @@ function App() {
 				/>
 				<PerspectiveCamera
 					makeDefault
-					position={[0, 0, 2]}
+					position={[0, 0, 1]}
 				/>
 				<BakeShadows />
 			</Suspense>
