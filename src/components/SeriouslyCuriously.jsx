@@ -56,10 +56,12 @@ export function SeriouslyCuriously(props) {
 
 	Promise.all([loadFontAtlas(png)]).then(([atlas]) => {
 		const geometry = new MSDFTextGeometry({
-			text: 'Seriously Spicy\n Curiously Crafty',
+			text: 'SeriouslySpicy\n CuriouslyCrafty',
 			font: fnt,
 		});
-
+		
+		console.log(geometry)
+		
 		const options = {
 			side: THREE.FrontSide,
 			transparent: true,
