@@ -71,7 +71,7 @@ export function PepperfoxMSDF1(props) {
 
 	Promise.all([loadFontAtlas(png)]).then(([atlas]) => {
 		const geometry = new MSDFTextGeometry({
-			text: "pepperfox",
+			text: "Spring\n Breaks",
 			font: fnt,
 		});
 
